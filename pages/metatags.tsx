@@ -3,15 +3,13 @@ import {
   Copy,
   Github,
   LoadingCircle,
-  Photo,
-  Tick,
   Twitter,
 } from "@/components/shared/icons";
+import { Check, Image } from "lucide-react";
 import getTweetsMetadata from "@/lib/twitter";
 import Tweet from "@/components/shared/tweet";
 import { useMemo, useState } from "react";
 import Background from "@/components/shared/background";
-import Meta from "@/components/layout/meta";
 import { useDebounce } from "use-debounce";
 import { fetcher, getDomainWithoutWWW, getUrlFromString } from "@/lib/utils";
 import useSWR from "swr";
@@ -95,7 +93,7 @@ export default function Metatags({ tweets }: { tweets: any }) {
             />
           ) : (
             <div className="flex h-[250px] w-full flex-col items-center justify-center space-y-4 border-b border-gray-300">
-              <Photo className="h-8 w-8 text-gray-400" />
+              <Image className="h-8 w-8 text-gray-400" />
               <p className="text-sm text-gray-400">
                 Enter a link to generate a preview.
               </p>
@@ -147,7 +145,7 @@ export default function Metatags({ tweets }: { tweets: any }) {
           </div>
           <span className="absolute inset-y-0 top-1 right-1 flex h-8 w-8 items-center justify-center rounded-full bg-black/[0.07] transition-all group-hover:bg-black/10">
             {copied ? (
-              <Tick className="h-4 w-4 text-gray-700" />
+              <Check className="h-4 w-4 text-gray-700" />
             ) : (
               <Copy className="h-4 w-4 text-gray-700" />
             )}

@@ -45,6 +45,7 @@
     "framer-motion": "^7.6.12",
     "html-escaper": "^3.0.3",
     "i": "^0.3.7",
+    "lucide-react": "^0.105.0-alpha.4",
     "mailing-core": "^0.9.1",
     "ms": "^2.1.3",
     "next": "^13.0.5",

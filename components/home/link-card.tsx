@@ -6,7 +6,8 @@ import useSWR from "swr";
 import { useLinkQRModal } from "@/components/app/modals/link-qr-modal";
 import BlurImage from "@/components/shared/blur-image";
 import CopyButton from "@/components/shared/copy-button";
-import { Chart, LoadingDots, QR, ThreeDots } from "@/components/shared/icons";
+import { LoadingDots, ThreeDots } from "@/components/shared/icons";
+import { BarChart, QrCode } from "lucide-react";
 import {
   DEFAULT_LINK_PROPS,
   FRAMER_MOTION_LIST_ITEM_VARIANTS,
@@ -163,7 +164,7 @@ export default function LinkCard({
                 className="group rounded-full bg-gray-100 p-1.5 transition-all duration-75 hover:scale-105 hover:bg-blue-100 active:scale-95"
               >
                 <span className="sr-only">Copy</span>
-                <QR className="text-gray-700 transition-all group-hover:text-blue-800" />
+                <QrCode className="h-4 w-4 text-gray-700 transition-all group-hover:text-blue-800" />
               </button>
               <Link
                 href={{ pathname: "/", query: { key } }}
@@ -172,7 +173,7 @@ export default function LinkCard({
                 scroll={false}
                 className="flex items-center space-x-1 rounded-md bg-gray-100 px-2 py-0.5 text-gray-700 transition-all duration-75 hover:scale-105 active:scale-95"
               >
-                <Chart className="h-4 w-4" />
+                <BarChart className="h-4 w-4" />
                 <p className="text-sm">
                   {!clicks && clicks != 0 ? (
                     <LoadingDots color="#71717A" />

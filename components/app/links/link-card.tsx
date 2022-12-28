@@ -9,15 +9,7 @@ import { useLinkQRModal } from "@/components/app/modals/link-qr-modal";
 import IconMenu from "@/components/shared/icon-menu";
 import BlurImage from "@/components/shared/blur-image";
 import CopyButton from "@/components/shared/copy-button";
-import {
-  Archive,
-  Chart,
-  Delete,
-  Edit,
-  LoadingDots,
-  QR,
-  ThreeDots,
-} from "@/components/shared/icons";
+import { ThreeDots } from "@/components/shared/icons";
 import Popover from "@/components/shared/popover";
 import Tooltip, { TooltipContent } from "@/components/shared/tooltip";
 import useProject from "@/lib/swr/use-project";
@@ -31,6 +23,7 @@ import {
   timeAgo,
 } from "@/lib/utils";
 import useIntersectionObserver from "@/lib/hooks/use-intersection-observer";
+import { Archive, BarChart, Edit, Trash2, QrCode } from "lucide-react";
 
 export default function LinkCard({ props }: { props: LinkProps }) {
   const { key, url, createdAt, archived, expiresAt } = props;
@@ -155,13 +148,13 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                 className="group rounded-full bg-gray-100 p-1.5 transition-all duration-75 hover:scale-105 hover:bg-blue-100 active:scale-95"
               >
                 <span className="sr-only">Download QR</span>
-                <QR className="text-gray-700 transition-all group-hover:text-blue-800" />
+                <QrCode className="h-4 w-4 text-gray-700 transition-all group-hover:text-blue-800" />
               </button>
               <Link
                 href={`/${slug || "links"}/${encodeURI(key)}`}
                 className="flex items-center space-x-1 rounded-md bg-gray-100 px-2 py-0.5 transition-all duration-75 hover:scale-105 active:scale-100"
               >
-                <Chart className="h-4 w-4" />
+                <BarChart className="h-4 w-4" />
                 <p className="whitespace-nowrap text-sm text-gray-500">
                   {nFormatter(clicks)}
                   <span className="ml-1 hidden sm:inline-block">clicks</span>
@@ -238,7 +231,7 @@ export default function LinkCard({ props }: { props: LinkProps }) {
                 >
                   <IconMenu
                     text="Delete"
-                    icon={<Delete className="h-4 w-4" />}
+                    icon={<Trash2 className="h-4 w-4" />}
                   />
                 </button>
               </div>

@@ -17,8 +17,8 @@ import {
   LoadingDots,
   Lock,
   Random,
-  X,
 } from "@/components/shared/icons";
+import { X } from "lucide-react";
 import Modal from "@/components/shared/modal";
 import Tooltip, { TooltipContent } from "@/components/shared/tooltip";
 import useProject from "@/lib/swr/use-project";

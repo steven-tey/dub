@@ -1,11 +1,8 @@
 import Link from "next/link";
 import useSWR from "swr";
 import BlurImage from "@/components/shared/blur-image";
-import {
-  CheckCircleFill,
-  Link as LinkIcon,
-  XCircleFill,
-} from "@/components/shared/icons";
+import { CheckCircleFill, XCircleFill } from "@/components/shared/icons";
+import { Link2 } from "lucide-react";
 import Tooltip, { TooltipContent } from "@/components/shared/tooltip";
 import { ProjectProps } from "@/lib/types";
 import { fetcher, nFormatter } from "@/lib/utils";
@@ -65,7 +62,7 @@ export default function ProjectCard({
           </div>
         </div>
         <div className="flex items-center space-x-2">
-          <LinkIcon className="h-5 w-5 text-gray-600" />
+          <Link2 className="h-5 w-5 text-gray-600" />
           {count || count === 0 ? (
             <h2 className="text-lg font-medium text-gray-700">
               {nFormatter(count)}

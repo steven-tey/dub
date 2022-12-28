@@ -4080,6 +4080,11 @@ lru-cache@^7.4.4, lru-cache@^7.5.1, lru-cache@^7.7.1:
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.14.1.tgz#8da8d2f5f59827edb388e63e459ac23d6d408fea"
   integrity sha512-ysxwsnTKdAx96aTRdhDOCQfDgbHnt8SK0KY8SEjO0wHinhWOFTESbjVCMPbU1uGXg/ch4lifqx0wfjOawU2+WA==
 
+lucide-react@^0.105.0-alpha.4:
+  version "0.105.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.105.0-alpha.4.tgz#9f9fa5a22973a071d63d65504866489d8050eaa7"
+  integrity sha512-QclWOzKYj7sDW33jTQK4enmxL1LmI2SHFqEEP56EWhvs4mmlbbFe6ALYcdcdGysNISNovEbH5WBHg8tN5DLn0w==
+
 mailing-core@^0.9.1:
   version "0.9.1"
   resolved "https://registry.yarnpkg.com/mailing-core/-/mailing-core-0.9.1.tgz#522e7ee2ebab1b23d5b0f00a7e5324c755fc2eb8"
