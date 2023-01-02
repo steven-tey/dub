@@ -816,6 +816,27 @@
   dependencies:
     "@babel/runtime" "^7.13.10"
 
+"@radix-ui/react-dialog@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@radix-ui/react-dialog/-/react-dialog-1.0.2.tgz#2d7a0bfed478afc40ed6fc78d0f53242af55284e"
+  integrity sha512-EKxxp2WNSmUPkx4trtWNmZ4/vAYEg7JkAfa1HKBUnaubw9eHzf1Orr9B472lJYaYz327RHDrd4R95fsw7VR8DA==
+  dependencies:
+    "@babel/runtime" "^7.13.10"
+    "@radix-ui/primitive" "1.0.0"
+    "@radix-ui/react-compose-refs" "1.0.0"
+    "@radix-ui/react-context" "1.0.0"
+    "@radix-ui/react-dismissable-layer" "1.0.2"
+    "@radix-ui/react-focus-guards" "1.0.0"
+    "@radix-ui/react-focus-scope" "1.0.1"
+    "@radix-ui/react-id" "1.0.0"
+    "@radix-ui/react-portal" "1.0.1"
+    "@radix-ui/react-presence" "1.0.0"
+    "@radix-ui/react-primitive" "1.0.1"
+    "@radix-ui/react-slot" "1.0.1"
+    "@radix-ui/react-use-controllable-state" "1.0.0"
+    aria-hidden "^1.1.1"
+    react-remove-scroll "2.5.5"
+
 "@radix-ui/react-direction@1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@radix-ui/react-direction/-/react-direction-1.0.0.tgz#a2e0b552352459ecf96342c79949dd833c1e6e45"
@@ -3178,21 +3199,6 @@ fill-range@^7.0.1:
   integrity sha512-qOo9F+dMUmC2Lcb4BbVvnKJxTPjCm+RRpe4gDuGrzkL7mEVl/djYSu2OdQ2Pa302N4oqkSg9ir6jaLWJ2USVpQ==
   dependencies:
     to-regex-range "^5.0.1"
-
-focus-trap-react@^10.0.1:
-  version "10.0.1"
-  resolved "https://registry.yarnpkg.com/focus-trap-react/-/focus-trap-react-10.0.1.tgz#5a50333f9753355765fcd7b83c6d2a59c5716c65"
-  integrity sha512-Av+O4JCT4/WnY25jnaOu1rysqhaD9aAhqAxxcrJbgKciZToIFmPng/WOrLJ1yHe6ntNmx1g0WhdeDfNCL1dmfA==
-  dependencies:
-    focus-trap "^7.1.0"
-    tabbable "^6.0.1"
-
-focus-trap@^7.1.0:
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/focus-trap/-/focus-trap-7.1.0.tgz#3226e977d76b1fd555c2e4f7ff91f10371f0f2cc"
-  integrity sha512-CuJvwUBfJCWcU6fc4xr3UwMF5vWnox4isXAixCwrPzCsPKOQjP9T+nTlYT2t+vOmQL8MOQ16eim99XhjQHAuiQ==
-  dependencies:
-    tabbable "^6.0.1"
 
 follow-redirects@^1.14.9:
   version "1.15.2"
@@ -6169,11 +6175,6 @@ swr@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/swr/-/swr-1.3.0.tgz#c6531866a35b4db37b38b72c45a63171faf9f4e8"
   integrity sha512-dkghQrOl2ORX9HYrMDtPa7LTVHJjCTeZoB1dqTbnnEDlSvN8JEKpYIYurDfvbQFUUS8Cg8PceFVZNkW0KNNYPw==
-
-tabbable@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.0.1.tgz#427a09b13c83ae41eed3e88abb76a4af28bde1a6"
-  integrity sha512-SYJSIgeyXW7EuX1ytdneO5e8jip42oHWg9xl/o3oTYhmXusZVgiA+VlPvjIN+kHii9v90AmzTZEBcsEvuAY+TA==
 
 tailwind-scrollbar-hide@^1.1.7:
   version "1.1.7"
