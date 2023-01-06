@@ -4,28 +4,23 @@ import { nFormatter } from "@/lib/utils";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import { fetcher } from "@/lib/utils";
-import useProject from "@/lib/swr/use-project";
 
 export default function Clicks() {
   const router = useRouter();
-  const {
-    slug,
-    key,
-    interval = "24h",
-  } = router.query as {
+  const { slug, domain, key, interval } = router.query as {
     slug?: string;
+    domain?: string;
     key: string;
     interval?: string;
   };
 
-  const { project: { domain } = {} } = useProject();
   const { data: totalClicks } = useSWR<number>(
     router.isReady &&
       `${
         slug && domain
-          ? `/api/projects/${slug}/domains/${domain}/links/${key}/clicks`
+          ? `/api/projects/${slug}/links/${key}/clicks`
           : `/api/edge/links/${key}/clicks`
-      }${interval ? `?interval=${interval}` : ""}`,
+      }?interval=${interval || "24h"}&domain=${domain}`,
     fetcher,
   );
 

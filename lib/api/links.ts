@@ -55,36 +55,41 @@ const getFiltersFromStatus = (status: string) => {
 };
 
 export async function getLinksForProject({
+  projectId,
   domain,
   status = "active",
+  tag,
+  search,
   sort = "createdAt",
   userId,
 }: {
-  domain: string;
+  projectId: string;
+  domain?: string;
   status?: string;
+  tag?: string;
+  search?: string;
   sort?: "createdAt" | "clicks"; // always descending for both
   userId?: string;
 }): Promise<LinkProps[]> {
   const filters = getFiltersFromStatus(status);
   return await prisma.link.findMany({
     where: {
+      projectId,
       domain,
       ...filters,
+      // ...(tag && { tags: { has: tag } }),
+      // ...(search && {
+      //   key: { search },
+      //   url: { search },
+      //   title: { search },
+      //   description: { search },
+      // }),
       ...(userId && { userId }),
     },
     orderBy: {
       [sort]: "desc",
     },
     take: 100,
-  });
-}
-
-export async function getLinkCountForProject(domain: string) {
-  return await prisma.link.count({
-    where: {
-      domain,
-      archived: false,
-    },
   });
 }
 

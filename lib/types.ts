@@ -1,4 +1,5 @@
 export interface SimpleLinkProps {
+  domain?: string;
   key: string;
   url: string;
 }
@@ -69,4 +70,12 @@ export type DomainVerificationStatusProps =
 export interface RootDomainProps {
   target: string;
   rewrite?: boolean;
+}
+
+export interface DomainProps {
+  slug: string;
+  verified: boolean;
+  primary: boolean;
+  target?: string;
+  type: "redirect" | "rewrite";
 }

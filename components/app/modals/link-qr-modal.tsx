@@ -33,7 +33,7 @@ function LinkQRModalHelper({
   props: SimpleLinkProps;
 }) {
   const anchorRef = useRef<HTMLAnchorElement>();
-  const { project: { domain, logo } = {} } = useProject();
+  const { project: { logo } = {} } = useProject();
   const { avatarUrl, apexDomain } = useMemo(() => {
     try {
       const apexDomain = getApexDomain(props.url);
@@ -62,9 +62,13 @@ function LinkQRModalHelper({
 
   const [showLogo, setShowLogo] = useState(true);
   const [fgColor, setFgColor] = useState("#000000");
+
   const qrData = useMemo(
     () => ({
-      value: linkConstructor({ key: props.key, domain }),
+      value: linkConstructor({
+        key: props.key,
+        domain: props.domain || "dub.sh",
+      }),
       bgColor: "#ffffff",
       fgColor,
       size: 1024,
@@ -78,7 +82,7 @@ function LinkQRModalHelper({
         },
       }),
     }),
-    [props.key, domain, fgColor, showLogo, qrLogoUrl],
+    [props, fgColor, showLogo, qrLogoUrl],
   );
 
   const copyToClipboard = async () => {
